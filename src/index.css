@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.link-strike { position: relative; display: inline-block; text-decoration: none !important; }
+.link-strike::after { content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background-color: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1); pointer-events: none; }
+.link-strike:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
