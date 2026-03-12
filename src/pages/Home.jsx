@@ -53,7 +53,7 @@ export default function Home() {
         <p>{t.homeBio2}</p>
       </div>
 
-      <div className="absolute bottom-0 right-0 md:right-0 lg:right-0 w-[180px] h-[240px] md:w-[220px] md:h-[280px] lg:w-[250px] lg:h-[300px] overflow-hidden br-image z-0 shadow-2xl">
+      <div className="absolute bottom-0 right-0 md:right-0 lg:right-0 w-[180px] h-[240px] md:w-[220px] md:h-[250px] lg:w-[250px] lg:h-[250px] overflow-hidden br-image z-0 shadow-2xl">
         <div className="w-full h-full bg-black">
           <picture>
             <source srcSet="/images/me.avif" type="image/avif" />
