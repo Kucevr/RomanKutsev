@@ -23,12 +23,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={container} className="h-full overflow-hidden flex flex-col justify-center relative px-2 md:px-12 z-10 w-full max-w-[1600px] mx-auto">
-      <div className="text-[10px] md:text-[13px] uppercase tracking-widest mb-0 md:mb-2 tag-text font-medium text-gray-700 font-['JetBrains_Mono']">
+    <div ref={container} className="h-full overflow-hidden flex flex-col justify-center relative px-2 md:px-12 z-10 w-full max-w-[1600px] mx-auto items-center md:items-start text-center md:text-left">
+      <div className="text-[10px] md:text-[13px] uppercase tracking-widest mb-0 md:mb-2 tag-text font-medium text-gray-700 font-['JetBrains_Mono'] w-full text-center md:text-left">
         {t.homeTag}
       </div>
 
-      <h1 className="text-[9vw] md:text-[8vw] lg:text-[7.5vw] leading-[0.85] font-['Oswald'] tracking-tighter uppercase font-500 text-left w-full mix-blend-difference z-20 pointer-events-none mt-12 md:mt-0">
+      <h1 className="text-[9vw] md:text-[8vw] lg:text-[7.5vw] leading-[0.85] font-['Oswald'] tracking-tighter uppercase font-500 text-left w-full mix-blend-difference z-20 pointer-events-none mt-0 md:mt-0 flex flex-col items-center md:items-start">
         <div className="main-line pb-1 overflow-hidden"><div className="line-inner">{t.homeLine1}</div></div>
         <div className="main-line pb-1 overflow-hidden"><div className={`line-inner flex ${t.homeLine2indent}`}>{t.homeLine2}</div></div>
         <div className="main-line pb-1 overflow-hidden"><div className={`line-inner flex items-center ${t.homeLine3indent}`}>
@@ -53,7 +53,7 @@ export default function Home() {
         <p>{t.homeBio2}</p>
       </div>
 
-      <div className="absolute bottom-4 right-2 md:right-0 lg:right-0 w-[160px] h-[210px] md:w-[220px] md:h-[250px] lg:w-[250px] lg:h-[250px] overflow-hidden br-image z-0 shadow-2xl">
+      <div className="absolute bottom-22 right-2 md:right-0 lg:right-0 w-[160px] h-[180px] md:w-[220px] md:h-[250px] lg:w-[250px] lg:h-[250px] overflow-hidden br-image z-0 shadow-2xl">
         <div className="w-full h-full bg-black">
           <picture>
             <source srcSet="/images/me.avif" type="image/avif" />
