@@ -30,7 +30,7 @@ export default function Contact() {
   return (
     <div ref={container} className="min-h-full md:h-full md:overflow-hidden flex flex-col justify-center pt-4 pb-4 md:pb-0 relative px-4 md:px-12 w-full max-w-[1600px] mx-auto z-10">
       
-      <div className="absolute top-40 right-24 md:right-60 text-[10px] md:text-[11px] font-['JetBrains_Mono'] uppercase tracking-widest text-gray-500 w-[150px] text-right overflow-hidden">
+      <div className="absolute top-40 right-1 md:right-60 text-[10px] md:text-[11px] font-['JetBrains_Mono'] uppercase tracking-widest text-gray-500 w-[150px] text-right overflow-hidden">
         <div className="contact-inner">{t.contactAvail1}</div>
         <div className="contact-inner">{t.contactAvail2}</div>
         <div className="contact-inner">{t.contactAvail3}</div>
@@ -48,7 +48,7 @@ export default function Contact() {
           <a href="mailto:hello@kutsev-studio.by" className="contact-link group flex items-center gap-4 cursor-pointer">
             <span className="text-[11px] font-['JetBrains_Mono'] tracking-widest text-gray-400 mt-2">[ 01 / EMAIL ]</span>
             <span className="text-2xl md:text-4xl lg:text-4xl font-['Oswald'] font-normal tracking-tight uppercase relative group-hover:italic transition-all duration-300 group-hover:text-gray-600">
-              hello@kutsev-studio.by
+              kucevr@gmail.com
               <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-black transition-all duration-500 group-hover:w-full"></span>
             </span>
           </a>

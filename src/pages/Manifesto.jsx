@@ -36,9 +36,9 @@ export default function Manifesto() {
         <div className="man-inner">{t.manifestoLabel2}</div>
       </div>
 
-      <h1 className="text-[12vw] md:text-[8vw] leading-[0.9] font-['Oswald'] tracking-tighter uppercase font-normal text-left mt-8 mb-8 md:mb-14 flex whitespace-nowrap items-center">
-        <div className="man-line pb-2 overflow-hidden"><div className="man-inner flex items-center">
-          DESIGN MANIFESTO <span className="font-['Instrument_Serif'] italic lowercase ml-6 text-gray-500 translate-y-1 lg:translate-y-2 text-[13vw] md:text-[9vw] font-light">{t.manifestoItalic}</span>
+      <h1 className="text-[14vw] md:text-[8vw] leading-[0.9] font-['Oswald'] tracking-tighter uppercase font-normal text-left mt-8 mb-8 md:mb-14 flex flex-wrap md:flex-nowrap whitespace-normal md:whitespace-nowrap items-center">
+        <div className="man-line pb-2 overflow-hidden"><div className="man-inner flex items-center flex-wrap md:flex-nowrap">
+          DESIGN MANIFESTO <span className="font-['Instrument_Serif'] italic lowercase ml-2 md:ml-6 text-gray-500 translate-y-1 lg:translate-y-2 text-[10vw] md:text-[9vw] font-light">{t.manifestoItalic}</span>
         </div></div>
       </h1>
 

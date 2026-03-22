@@ -28,7 +28,7 @@ export default function Home() {
         {t.homeTag}
       </div>
 
-      <h1 className="text-[9vw] md:text-[8vw] lg:text-[7.5vw] leading-[0.85] font-['Oswald'] tracking-tighter uppercase font-500 text-left w-full mix-blend-difference z-20 pointer-events-none">
+      <h1 className="text-[9vw] md:text-[8vw] lg:text-[7.5vw] leading-[0.85] font-['Oswald'] tracking-tighter uppercase font-500 text-left w-full mix-blend-difference z-20 pointer-events-none mt-12 md:mt-0">
         <div className="main-line pb-1 overflow-hidden"><div className="line-inner">{t.homeLine1}</div></div>
         <div className="main-line pb-1 overflow-hidden"><div className={`line-inner flex ${t.homeLine2indent}`}>{t.homeLine2}</div></div>
         <div className="main-line pb-1 overflow-hidden"><div className={`line-inner flex items-center ${t.homeLine3indent}`}>
@@ -40,7 +40,7 @@ export default function Home() {
         </div></div>
       </h1>
 
-      <div className="hidden lg:block absolute bottom-2 md:bottom-2 left-4 md:left-16 lg:left-24 w-[320px] text-[10px] leading-relaxed uppercase bio-text z-10 bg-transparent p-5 font-medium tracking-wide text-gray-800 font-['JetBrains_Mono']">
+      <div className="absolute bottom-24 md:bottom-2 left-2 md:left-16 lg:left-24 w-[160px] md:w-[320px] text-[8px] md:text-[10px] leading-relaxed uppercase bio-text z-30 bg-transparent md:bg-transparent p-3 md:p-5 font-medium tracking-wide text-gray-800 font-['JetBrains_Mono']">
         <div className="absolute top-0 left-0 w-2 h-[1px] bg-black"></div>
         <div className="absolute top-0 left-0 w-[1px] h-2 bg-black"></div>
         <div className="absolute top-0 right-0 w-2 h-[1px] bg-black"></div>
@@ -49,11 +49,11 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-[1px] h-2 bg-black"></div>
         <div className="absolute bottom-0 right-0 w-2 h-[1px] bg-black"></div>
         <div className="absolute bottom-0 right-0 w-[1px] h-2 bg-black"></div>
-        <p className="mb-2">{t.homeBio1}</p>
+        <p className="mb-1 md:mb-2">{t.homeBio1}</p>
         <p>{t.homeBio2}</p>
       </div>
 
-      <div className="absolute bottom-0 right-0 md:right-0 lg:right-0 w-[180px] h-[240px] md:w-[220px] md:h-[250px] lg:w-[250px] lg:h-[250px] overflow-hidden br-image z-0 shadow-2xl">
+      <div className="absolute bottom-4 right-2 md:right-0 lg:right-0 w-[160px] h-[210px] md:w-[220px] md:h-[250px] lg:w-[250px] lg:h-[250px] overflow-hidden br-image z-0 shadow-2xl">
         <div className="w-full h-full bg-black">
           <picture>
             <source srcSet="/images/me.avif" type="image/avif" />

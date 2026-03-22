@@ -44,6 +44,7 @@ export default function Work() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
+      const isMobile = window.innerWidth < 768;
 
       gsap.set('.work-inner', { y: '100%' });
       
@@ -61,7 +62,7 @@ export default function Work() {
           opacity: 1, 
           y: 0, 
           duration: 1.2,
-          stagger: { each: 0.05, from: 'center' },
+          stagger: isMobile ? 0.1 : { each: 0.05, from: 'center' },
           ease: 'power4.out',
           delay: 0.2
         }
@@ -72,7 +73,7 @@ export default function Work() {
 
   useEffect(() => {
     const el = scrollRef.current;
-    if (!el) return;
+    if (!el || window.innerWidth < 768) return;
 
     // Start near the middle to allow scrolling left and right infinitely
     setTimeout(() => {
@@ -111,8 +112,10 @@ export default function Work() {
     if (scrollRef.current) scrollRef.current.scrollBy({ left: window.innerWidth * 0.4, behavior: 'smooth' });
   };
 
+  const isMobile = window.innerWidth < 768;
+
   return (
-    <div ref={container} className="h-full overflow-hidden flex flex-col pt-4 relative px-4 md:px-12 w-full max-w-[1600px] mx-auto z-10">
+    <div ref={container} className="h-full md:overflow-hidden flex flex-col pt-4 relative px-4 md:px-12 w-full max-w-[1600px] mx-auto z-10">
       
       <div className="absolute top-4 right-4 md:right-12 text-[10px] md:text-[11px] font-['JetBrains_Mono'] uppercase tracking-widest text-gray-500 w-[150px] text-right overflow-hidden hidden md:block">
         <div className="work-inner">{t.workArchive}</div>
@@ -120,7 +123,7 @@ export default function Work() {
       </div>
 
       <div className="flex justify-between items-end mb-8 lg:mb-12 pointer-events-none">
-        <h1 className="text-[10vw] md:text-[8vw] leading-[0.9] font-['Oswald'] tracking-tighter uppercase font-normal text-left mix-blend-difference">
+        <h1 className="text-[14vw] md:text-[8vw] leading-[0.9] font-['Oswald'] tracking-tighter uppercase font-normal text-left mix-blend-difference mt-8 md:mt-0">
           <div className="work-line pb-2 overflow-hidden"><div className="work-inner">{t.workTitle}</div></div>
         </h1>
 
@@ -136,15 +139,15 @@ export default function Work() {
 
       <div 
         ref={scrollRef} 
-        className="w-full flex overflow-x-auto gap-6 lg:gap-12 relative z-20 pb-8 hide-scrollbar scroll-smooth snap-x snap-mandatory"
+        className="w-full h-full flex flex-col md:flex-row overflow-y-auto md:overflow-x-auto gap-12 md:gap-6 lg:gap-12 relative z-20 pb-20 md:pb-8 hide-scrollbar scroll-smooth snap-y md:snap-x snap-mandatory"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         <style>{`
           .hide-scrollbar::-webkit-scrollbar { display: none; }
         `}</style>
         
-        {infiniteProjects.map((p, i) => (
-          <div key={i} onClick={() => navigate('/work/' + p.id)} className="proj-card group flex flex-col cursor-pointer flex-shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] snap-center">
+        {(isMobile ? projects : infiniteProjects).map((p, i) => (
+          <div key={i} onClick={() => navigate('/work/' + p.id)} className="proj-card group flex flex-col cursor-pointer flex-shrink-0 w-full md:w-[60vw] lg:w-[45vw] snap-center">
              <div className="w-full aspect-video overflow-hidden bg-gray-200">
                <img 
                  src={p.image} 
